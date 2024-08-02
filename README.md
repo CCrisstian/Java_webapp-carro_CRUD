@@ -89,5 +89,22 @@ Paquete: `org.CCristian.apiservlet.webapp.headers.services`
 <h3>Función:</h3>
 
 - Proporciona un servicio de alto nivel para manejar las operaciones relacionadas con productos y categorías.
-- Utiliza los repositorios ProductoRepositoryJdbcImpl y CategoriaRepositoryImpl para acceder a la base de datos.
+- Utiliza los repositorios `ProductoRepositoryJdbcImpl` y `CategoriaRepositoryImpl` para acceder a la base de datos.
 - Proporciona métodos para listar productos y categorías, buscar por ID, guardar y eliminar productos, encapsulando la lógica de negocio y manejo de excepciones.
+
+<h1>Archivo "form.jsp"</h1>
+<h3>Función:</h3>
+
+- Presenta un formulario HTML para crear o editar productos.
+- Muestra errores de validación en caso de entradas incorrectas o faltantes.
+- Usa datos del `Producto` y las `Categorías` proporcionados en el request para rellenar y manejar el formulario.
+
+<h1>Clase ProductoFormServlet</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.controllers`
+<h3>Función:</h3>
+
+- Controlador Servlet que maneja las solicitudes HTTP para el formulario de productos.
+- En el método `doGet`, carga un producto existente si se proporciona un ID, o prepara un nuevo producto y categorías para el formulario.
+- En el método `doPost`, valida la entrada del formulario, gestiona errores, y guarda el producto en la base de datos utilizando el servicio `ProductosServiceJdbcImpl`.
+- Redirige a la página adecuada tras el procesamiento del formulario.
