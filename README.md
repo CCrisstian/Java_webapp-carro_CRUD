@@ -45,3 +45,49 @@ variable = (condición) ? valor_si_verdadero : valor_si_falso;
   - Valor si verdadero: Si la condición es `true` (es decir, los IDs son iguales), la expresión devuelve `"selected"`, lo que indica que esta opción debe mostrarse como seleccionada en la lista desplegable.
   - Valor si falso: Si la condición es `false`, la expresión devuelve una cadena vacía `""`, por lo que la opción no se marca como seleccionada.
 - `<%=c.getNombre()%>`: Esto evalúa `c.getNombre()` para obtener el nombre de la categoría `c`, que se muestra como el texto visible de la opción en la lista desplegable.
+
+<h1>Clase "Producto"</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.models`
+<h3>Función:</h3>
+
+- Representa un producto con atributos como `id`, `nombre`, `categoria`, `precio`, `sku` y `fechaRegistro`.
+- Proporciona métodos `getter` y `setter` para acceder y modificar estos atributos.
+- Permite encapsular la lógica de negocio relacionada con un producto.
+
+<h1>Clase "Categoria"</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.models`
+<h3>Función:</h3>
+
+- Representa una categoría con atributos como `id` y `nombre`.
+- Proporciona métodos `getter` y `setter` para acceder y modificar estos atributos.
+- Se utiliza para clasificar productos en diferentes categorías.
+
+<h1>Clase "ProductoRepositoryJdbcImpl"</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.repositories`
+
+<h3>Función:</h3>
+
+- Implementa las operaciones de CRUD (Crear, Leer, Actualizar, Eliminar) para productos en la base de datos.
+- Utiliza JDBC para interactuar con la base de datos.
+- Incluye métodos para listar todos los productos, buscar un producto por ID, guardar un producto (insertar o actualizar), y eliminar un producto.
+
+<h1>Clase "CategoriaRepositoryImpl"</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.repositories`
+<h3>Función:</h3>
+
+- Implementa las operaciones de CRUD para categorías en la base de datos.
+- Utiliza JDBC para interactuar con la base de datos.
+- Incluye métodos para listar todas las categorías y buscar una categoría por ID.
+
+<h1>Clase "ProductosServiceJdbcImpl"</h1>
+
+Paquete: `org.CCristian.apiservlet.webapp.headers.services`
+<h3>Función:</h3>
+
+- Proporciona un servicio de alto nivel para manejar las operaciones relacionadas con productos y categorías.
+- Utiliza los repositorios ProductoRepositoryJdbcImpl y CategoriaRepositoryImpl para acceder a la base de datos.
+- Proporciona métodos para listar productos y categorías, buscar por ID, guardar y eliminar productos, encapsulando la lógica de negocio y manejo de excepciones.
